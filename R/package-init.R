@@ -1,4 +1,4 @@
-#' @useDynLib epicTripleTx, .registration=TRUE
+#' @useDynLib epicR, .registration=TRUE
 #' @importFrom stats lm time
 #' @importFrom Rcpp sourceCpp
 #' @importFrom Rcpp evalCpp
@@ -10,10 +10,11 @@
 #' @import ggthemes
 #' @import dplyr
 #' @importFrom scales pretty_breaks
+#' @importFrom reshape2 melt
 #' @import jsonlite
 NULL
 
 .onUnload <- function (libpath) {
-  library.dynam.unload("epicTripleTx", libpath)
+  library.dynam.unload("epicR", libpath)
 }
 
